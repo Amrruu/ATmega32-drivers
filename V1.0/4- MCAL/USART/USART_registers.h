@@ -1,15 +1,32 @@
-#ifndef TIMER_REGISTERS_H_
-#define TIMER_REGISTERS_H_
+#ifndef USART_REGISTERS_H_
+#define USART_REGISTERS_H_
 
-#define TCCR0 *((volatile u8 *)(0x53)) /*Timer0 control register*/
-#define TCCR0_WGM00 6                  /*Waveform generation mode bit0*/
-#define TCCR0_WGM01 3                  /*Waveform generation mode bit1*/
-#define TCCR0_CS02 2                   /*Prescaler bit2*/
-#define TCCR0_CS01 1                   /*Prescaler bit1*/
-#define TCCR0_CS00 0                   /*Prescaler bit0*/
+#define USART_UDR       *((volatile u8*)0x2C)  
 
-#define OCR0 *((volatile u8 *)(0x5C))  /*Output compare register 0*/
-#define TIMSK *((volatile u8 *)(0x59)) /*Timer mask*/
-#define TIMSK_OCIE0 1                  /*Output compare interrupt enable*/
+#define USART_UCSRA     *((volatile u8*)0x2B)
+
+#define UCSRA_RXC         7
+#define UCSRA_TXC         6
+#define UCSRA_UDRE        5
+#define UCSRA_FE          4
+#define UCSRA_DOR         3
+#define UCSRA_PE          2
+#define UCSRA_U2X         1
+#define UCSRA_MPCM        0
+
+#define USART_UCSRB     *((volatile u8*)0x2A)  
+#define UCSRB_RXCIE     7     
+#define UCSRB_TXCIE     6    
+#define UCSRB_UDRIE     5    
+#define UCSRB_RXEN      4   
+#define UCSRB_TXEN      3   
+#define UCSRB_UCSZ2     2    
+#define UCSRB_RXB8      1   
+#define UCSRB_TXB8      0   
+
+#define USART_UBRRL     *((volatile u8*)0x29)  
+
+
+
 
 #endif

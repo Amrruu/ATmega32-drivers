@@ -1,4 +1,4 @@
-#ifndef TIMER_PRIVATE_H_
-#define TIMER_PRIVATE_H_
+#ifndef USART_PRIVATE_H_
+#define USART_PRIVATE_H_
 
 #endif
